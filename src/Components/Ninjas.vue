@@ -37,7 +37,7 @@ export default {
   }
 
 LI {
-  padding: 5rem;
+  padding: 1rem 5rem;
   border: 2px solid #000;
   font-weight: bold;
 }

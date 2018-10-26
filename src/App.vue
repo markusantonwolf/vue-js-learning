@@ -2,6 +2,9 @@
 <div id="app">
   <Header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></Header>
   <p>{{ title }}</p>
+  <hr>
+  <Titel></Titel>
+  <hr>
   <Ninjas v-bind:ninjas="ninjas"></Ninjas>
   <h2>Ninjas</h2>
   <ul>
@@ -19,12 +22,15 @@
 <script>
 import Header from './Components/Header.vue'
 import Ninjas from './Components/Ninjas.vue'
+import Titel from './Components/Titel.vue'
 import Footer from './Components/Footer.vue'
+
 export default {
   name: 'app',
 
   components: {
     'Header': Header,
+    'Titel': Titel,
     'Ninjas': Ninjas,
     'Footer': Footer
   },
