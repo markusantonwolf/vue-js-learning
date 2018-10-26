@@ -1,17 +1,29 @@
 <template>
   <header>
-    <h1>
+    <h1 v-on:click="changeTitle">
       {{ title }}
     </h1>
+    <h2>
+      {{ secondtitle }}
+    </h2>
   </header>
 </template>
 
 <script>
 export default {
   name: 'app',
+  props: [
+    'title'
+  ],
   data() {
     return {
-      title: 'Welcome to an other Vue.ja App'
+      secondtitle: 'Welcome to an other Vue.ja App'
+    }
+  },
+  methods: {
+    changeTitle() {
+      // this.title = 'test';
+      this.$emit('changeTitle', 'Yet an other Welcome...');
     }
   }
 }

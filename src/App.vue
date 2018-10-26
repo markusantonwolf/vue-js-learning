@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <Header></Header>
+  <Header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></Header>
   <p>{{ title }}</p>
   <Ninjas v-bind:ninjas="ninjas"></Ninjas>
   <ul>
@@ -9,12 +9,11 @@
     <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
     <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
   </ul>
-  <h2>Ecosystem</h2>
+  <h2>Ninjas</h2>
   <ul>
-    <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-    <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-    <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-    <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
+    <li v-for="ninja in ninjas">
+      {{ninja.name}}
+    </li>
   </ul>
   <Footer></Footer>
 </div>
@@ -35,19 +34,28 @@ export default {
   data() {
     return {
       title: 'Welcome to Your Vue.js App',
-      ninjas: [{
+      ninjas: [
+        {
+          id: '1',
           name: 'Hans',
           show: true,
         },
         {
+          id: '2',
           name: 'Peter',
           show: true,
         },
         {
+          id: '3',
           name: 'Werner',
           show: true,
         }
       ]
+    }
+  },
+  methods: {
+    updateTitle(updatedTitle) {
+      this.title = updatedTitle;
     }
   }
 }

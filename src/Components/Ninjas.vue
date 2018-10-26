@@ -1,10 +1,11 @@
 <template>
 <ul>
-  <li v-for="ninja in ninjas" v-on:click="ninja.show = !ninja.show">
-    <h2>{{ ninja.name }}</h2>
+  <li v-for="ninja in ninjas">
+    <h2 v-on:click="ninja.show = !ninja.show">{{ ninja.name }}</h2>
     <p v-if="ninja.show">
       {{ ninja.name }}
     </p>
+    <button type="button" name="button" v-on:click="deleteNinja(ninja.id)">X</button>
   </li>
 </ul>
 </template>
@@ -16,7 +17,12 @@ export default {
   data() {
     return {
       title: 'Ninja',
-
+    }
+  },
+  methods: {
+    deleteNinja(id) {
+      this.ninjas.splice(id, 1);
+      console.info('delete: ' + id);
     }
   }
 }
@@ -34,5 +40,8 @@ LI {
   padding: 5rem;
   border: 2px solid #000;
   font-weight: bold;
+}
+BUTTON {
+  padding: 1rem;
 }
 </style>
