@@ -7,13 +7,21 @@
 </template>
 
 <script>
+
+import {bus} from '../main';
+
 export default {
   name: 'app',
   data() {
     return {
       footer: 'Footer.vue component'
     }
-  }
+  },
+  created() {
+    bus.$on('busUpdate', (data) => {
+      this.footer = data;
+    })
+  },
 }
 </script>
 
