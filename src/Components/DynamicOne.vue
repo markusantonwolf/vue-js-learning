@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>{{title}}</p>
+    <input type="text" name="" value="ONE">
   </div>
 </template>
 
@@ -8,7 +9,7 @@
 export default {
   data() {
     return {
-      title: 'dynamic component TWO'
+      title: 'dynamic component ONE'
     }
   }
 }

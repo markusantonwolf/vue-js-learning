@@ -3,7 +3,9 @@
     <h2>
       {{ title }}
     </h2>
-    <component v-bind:is="componentName"></component>
+    <keep-alive>
+      <component v-bind:is="componentName"></component>
+    </keep-alive>
     <button v-on:click="switchComponent" type="button" name="button">SWITCH</button>
   </div>
 </template>
