@@ -5,6 +5,8 @@
   <hr>
   <Titel></Titel>
   <hr>
+  <Blogpost></Blogpost>
+  <hr>
   <Ninjas v-bind:ninjas="ninjas"></Ninjas>
   <h2>Ninjas</h2>
   <ul>
@@ -23,6 +25,7 @@
 import Header from './Components/Header.vue'
 import Ninjas from './Components/Ninjas.vue'
 import Titel from './Components/Titel.vue'
+import Blogpost from './Components/Blogpost.vue'
 import Footer from './Components/Footer.vue'
 
 export default {
@@ -32,6 +35,7 @@ export default {
     'Header': Header,
     'Titel': Titel,
     'Ninjas': Ninjas,
+    'Blogpost': Blogpost,
     'Footer': Footer
   },
   data() {
