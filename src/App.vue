@@ -9,7 +9,10 @@
       {{ninja.name}}
     </li>
   </ul>
-  <Footer></Footer>
+  <Footer>
+    <p slot="row1">Hello I'm slot row1 with variables: {{ variableSlot }}</p>
+    <p slot="row2">Hello I'm slot row2</p>
+  </Footer>
 </div>
 </template>
 
@@ -28,6 +31,7 @@ export default {
   data() {
     return {
       title: 'Welcome to Your Vue.js App',
+      variableSlot: 'SLOTs are great',
       ninjas: [
         {
           id: '1',

@@ -1,8 +1,10 @@
 <template>
   <footer>
+    <slot name="row1"></slot>
     <p>
       {{footer}}
     </p>
+    <slot name="row2"></slot>
   </footer>
 </template>
 
@@ -29,7 +31,7 @@ export default {
   @import "../assets/styles/variables.scss";
 
   FOOTER {
-    padding: 4rem;
+    padding: 1rem 4rem;
     background-color: $footer;
   }
 
