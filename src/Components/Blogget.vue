@@ -1,8 +1,8 @@
 <template>
-  <div class="blog">
+  <div class="blog" v-theme:modern="'dark'">
     <h1>All Blog Posts</h1>
     <div class="blogpost" v-for="post in blog">
-      <h2>{{post.title}}</h2>
+      <h2 v-randomcolor>{{post.title}}</h2>
       <p>{{post.body}}</p>
     </div>
   </div>
@@ -33,8 +33,13 @@ export default {
   @import "../assets/styles/variables.scss";
 
   .blog {
+    margin: 0 auto;
     padding: 1rem;
     background-color: rgb(255, 245, 231);
+
+    &.modern {
+      background-color: rgb(237, 237, 237);
+    }
 
   }
 
