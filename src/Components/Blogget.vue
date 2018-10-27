@@ -1,7 +1,8 @@
 <template>
-  <div class="blog" v-theme:modern="'dark'">
+  <div class="blog" v-theme:modern="'light'">
     <h1>All Blog Posts</h1>
-    <div class="blogpost" v-for="post in blog">
+    <input type="text" name="" v-model="search" placeholder="Filter..." />
+    <div class="blogpost" v-for="post in filteredBlogs">
       <h2 v-randomcolor>{{post.title | to-uppercase}}</h2>
       <p>{{post.body | excerpt }}</p>
     </div>
@@ -13,7 +14,8 @@
 export default {
   data() {
     return {
-      blog: []
+      blog: [],
+      search: ''
     }
   },
   created() {
@@ -25,6 +27,13 @@ export default {
       this.blog = data.body.splice(0, 10);
       console.info(data);
     });
+  },
+  computed: {
+    filteredBlogs () {
+      return this.blog.filter( (blog) => {
+        return blog.title.match(this.search);
+      });
+    }
   }
 }
 </script>
