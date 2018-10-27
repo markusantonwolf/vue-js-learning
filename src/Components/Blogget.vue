@@ -2,8 +2,8 @@
   <div class="blog" v-theme:modern="'dark'">
     <h1>All Blog Posts</h1>
     <div class="blogpost" v-for="post in blog">
-      <h2 v-randomcolor>{{post.title}}</h2>
-      <p>{{post.body}}</p>
+      <h2 v-randomcolor>{{post.title | to-uppercase}}</h2>
+      <p>{{post.body | excerpt }}</p>
     </div>
   </div>
 </template>
