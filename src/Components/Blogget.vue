@@ -25,7 +25,7 @@ export default {
       }
     }).then(function(data){
       this.blog = data.body.splice(0, 10);
-      console.info(data);
+      // console.info(data);
     });
   },
   computed: {
