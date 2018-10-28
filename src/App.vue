@@ -3,20 +3,7 @@
   <app-navigation></app-navigation>
   <div class="main">
       <router-view></router-view>
-      <hr>
-      <Header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></Header>
-      <p>{{ title }}</p>
-      <hr>
-      <Titel></Titel>
-      <hr>
-      <hr>
-      <Ninjas v-bind:ninjas="ninjas"></Ninjas>
-      <h2>Ninjas</h2>
-      <ul>
-        <li v-for="ninja in ninjas">
-          {{ninja.name}}
-        </li>
-      </ul>
+
   </div>
   <Footer>
     <p slot="row1">Hello I'm slot row1 with variables: {{ variableSlot }}</p>
@@ -27,24 +14,14 @@
 
 <script>
 import appNavigation from './Components/Navigation.vue'
-import Header from './Components/Header.vue'
-import Ninjas from './Components/Ninjas.vue'
-import Titel from './Components/Titel.vue'
-import Blogpost from './Components/Blogpost.vue'
-import Blogget from './Components/Blogget.vue'
-import Footer from './Components/Footer.vue'
+import appFooter from './Components/Footer.vue'
 
 export default {
   name: 'app',
 
   components: {
-    'Header': Header,
     'app-navigation': appNavigation,
-    'Titel': Titel,
-    'Ninjas': Ninjas,
-    'Blogpost': Blogpost,
-    'Blogget': Blogget,
-    'Footer': Footer
+    'app-footer': appFooter
   },
   data() {
     return {

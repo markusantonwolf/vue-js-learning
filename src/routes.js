@@ -1,15 +1,25 @@
-import BlogGet from './Components/Blogget.vue'
-import BlogPost from './Components/Blogpost.vue'
+import BlogGet from './Pages/Blogget.vue'
+import BlogSingle from './Pages/Blogsingle.vue'
+import BlogPost from './Pages/Blogpost.vue'
+import Material from './Pages/Material.vue'
 
 export default [
 
   {
-    path: '/get',
+    path: '/list',
     component: BlogGet
+  },
+  {
+    path: '/list/:id',
+    component: BlogSingle
   },
   {
     path: '/post',
     component: BlogPost
+  },
+  {
+    path: '/material',
+    component: Material
   }
 
 ]

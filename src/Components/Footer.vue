@@ -30,9 +30,4 @@ export default {
 <style scoped lang="scss">
   @import "../assets/styles/variables.scss";
 
-  FOOTER {
-    padding: 1rem 4rem;
-    background-color: $footer;
-  }
-
 </style>

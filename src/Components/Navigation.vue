@@ -2,8 +2,9 @@
   <nav>
     <div class="navigation">
       <ul>
-        <li><router-link to='/get'>List</router-link></li>
+        <li><router-link to='/list'>List</router-link></li>
         <li><router-link to='/post'>Post</router-link></li>
+        <li><router-link to='/material'>Material</router-link></li>
       </ul>
     </div>
   </nav>
@@ -12,7 +13,6 @@
 <script>
 
 export default {
-  name: 'app',
   props: [
     'title'
   ],
@@ -27,9 +27,5 @@ export default {
 <style scoped lang="scss">
   @import "../assets/styles/variables.scss";
 
-  NAV {
-    width: 100%;
-    background-color: $background;
-  }
 
 </style>

@@ -15,6 +15,7 @@ BODY {
 
 * {
   font-family: 'Krub', sans-serif;
+  box-sizing: border-box;
 }
 
 H1 {
@@ -75,5 +76,35 @@ H2 {
   margin: 0 auto;
   padding: 0;
   width: 90%;
+  height: auto;
+  min-height: calc(100% - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+
+FOOTER {
+  margin: 0;
+  padding: 1rem 4rem;
+  background-color: $footer;
+}
+
+.loading {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+
+  IMG {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    min-height: 60px;
+    height: auto;
+  }
+
 }
