@@ -1,12 +1,12 @@
 <template>
 <div id="app">
+  <router-view></router-view>
+  <hr>
   <Header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></Header>
   <p>{{ title }}</p>
   <hr>
   <Titel></Titel>
   <hr>
-  <!-- <Blogpost></Blogpost> -->
-  <Blogget></Blogget>
   <hr>
   <Ninjas v-bind:ninjas="ninjas"></Ninjas>
   <h2>Ninjas</h2>
